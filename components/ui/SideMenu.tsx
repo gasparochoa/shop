@@ -5,6 +5,7 @@ import { AccountCircleOutlined, AdminPanelSettings, CategoryOutlined, Confirmati
 
 import { UiContext, AuthContext } from '../../context';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 
 export const SideMenu = () => {
@@ -127,15 +128,21 @@ export const SideMenu = () => {
                         </ListItem>
                     )
                     : (
-                        <ListItem 
-                            button
-                            onClick={ () => navigateTo(`/auth/login?p=${ router.asPath }`) }
+                        <Link
+                            href={`/auth/login?p=${ router.asPath }`}
+                            passHref
+                            //prefetch={ false }
                         >
-                            <ListItemIcon>
-                                <VpnKeyOutlined/>
-                            </ListItemIcon>
-                            <ListItemText primary={'Ingresar'} />
-                        </ListItem>
+                            <ListItem 
+                                button
+                               // onClick={ () => navigateTo(`/auth/login?p=${ router.asPath }`) }
+                            >
+                                <ListItemIcon>
+                                    <VpnKeyOutlined/>
+                                </ListItemIcon>
+                                <ListItemText primary={'Ingresar'} />
+                            </ListItem>
+                        </Link>
                     )
                 }
 

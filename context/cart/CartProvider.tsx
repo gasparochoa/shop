@@ -73,7 +73,6 @@ export const CartProvider:FC = ({ children }) => {
 
 
     useEffect(() => {
-        
         const numberOfItems = state.cart.reduce( ( prev, current ) => current.quantity + prev , 0 );
         const subTotal = state.cart.reduce( ( prev, current ) => (current.price * current.quantity) + prev, 0 );
         const taxRate =  Number(process.env.NEXT_PUBLIC_TAX_RATE || 0);
@@ -162,7 +161,6 @@ export const CartProvider:FC = ({ children }) => {
 
 
         try {
-            
             const { data } = await tesloApi.post<IOrder>('/orders', body);
 
             dispatch({ type: '[Cart] - Order complete' });

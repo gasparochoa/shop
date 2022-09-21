@@ -180,7 +180,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, query }) => 
 
 
     return {
-        props: { }
+        props: {}
     }
 }
 
