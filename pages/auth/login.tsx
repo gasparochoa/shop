@@ -164,20 +164,20 @@ const LoginPage = () => {
 
 export const getServerSideProps: GetServerSideProps = async ({ req, query }) => {
     
-    const session = await getSession({ req });
-    // console.log({session});
+    // const session = await getSession({ req });
+    // // console.log({session});
 
-    const { p = '/' } = query;
+    // const { p = '/' } = query;
 
-    if ( session ) {
-        return {
-            redirect: {
-                destination: p.toString(),
-                permanent: false
-            }
-        }
-    }
-
+    // if ( session ) {
+    // }
+    
+    // return {
+    //     redirect: {
+    //         destination: p.toString(),
+    //         permanent: false
+    //     }
+    // }
 
     return {
         props: {}
