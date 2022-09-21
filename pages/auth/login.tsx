@@ -28,12 +28,12 @@ const LoginPage = () => {
     
     const [providers, setProviders] = useState<any>({});
 
-    useEffect(() => {
-      getProviders().then( prov => {
-        // console.log({prov});
-        setProviders(prov)
-      })
-    }, [])
+    // useEffect(() => {
+    //   getProviders().then( prov => {
+    //     // console.log({prov});
+    //     setProviders(prov)
+    //   })
+    // }, [])
     
 
 
